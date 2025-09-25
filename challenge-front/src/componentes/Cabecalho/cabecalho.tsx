@@ -4,7 +4,7 @@ export default function Cabecalho(){
  
     return(
         <header>
-            <h1>ThreeH</h1>
+            <h1>Cabecalho</h1>
             <Menu/>
         </header>  
     );
