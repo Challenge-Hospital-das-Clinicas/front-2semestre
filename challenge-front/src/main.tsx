@@ -10,6 +10,7 @@ import Contato from './rotas/Contato/index.tsx';
 import Faq from './rotas/Faq/index.tsx';
 import Tutorial from './rotas/Tutorial/index.tsx';
 import Integrantes from './rotas/Integrantes/index.tsx'
+
  
 const router = createBrowserRouter([
   {path:"/", element: <App/>, errorElement:<Error/>, children:[
