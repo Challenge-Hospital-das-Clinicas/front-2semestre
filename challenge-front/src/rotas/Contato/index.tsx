@@ -1,71 +1,91 @@
+import { useForm } from 'react-hook-form';
+
+// Definindo um tipo para os dados do nosso formulário
+type ContatoFormData = {
+  nome: string;
+  email: string;
+  mensagem: string;
+};
+
 export default function Contato() {
+  // Instanciando o hook e pegando as funções que precisamos
+  const { register, handleSubmit, formState: { errors } } = useForm<ContatoFormData>();
+
+  // Esta função será chamada apenas se o formulário for válido
+  const onSubmit = (data: ContatoFormData) => {
+    console.log("Formulário de contato válido!", data);
+    alert(`Obrigado pelo contato, ${data.nome}!`);
+    // Aqui viria a lógica para enviar os dados para uma API
+  };
+
   return (
-   
     <div className="py-10 px-4">
-
-      
       <div className="mx-auto max-w-2xl bg-white rounded-xl shadow-lg p-8">
-
-      
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-slate-800 tracking-tight">
             Entre em Contato
           </h1>
           <p className="mt-2 text-slate-600">
-            Estamos aqui para ajudar. Preencha o formulário abaixo e retornaremos o mais breve possível.
+            Preencha o formulário e retornaremos o mais breve possível.
           </p>
         </div>
 
-        {/* Formulário */}
-        <form className="flex flex-col gap-6">
+        {/* O handleSubmit valida o formulário antes de chamar nossa função onSubmit */}
+        <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-6">
 
           {/* Campo Nome */}
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="nome" className="font-semibold text-slate-700">
-              Nome
-            </label>
+            <label htmlFor="nome" className="font-semibold text-slate-700">Nome</label>
             <input
               type="text"
               id="nome"
               placeholder="Digite seu nome completo"
               className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              // Registrando o campo com validação
+              {...register("nome", { 
+                required: "O nome é obrigatório",
+                minLength: { value: 2, message: "O nome deve ter no mínimo 2 caracteres" } 
+              })}
             />
+            {/* Exibindo a mensagem de erro se houver */}
+            {errors.nome && <small className="text-red-500">{errors.nome.message}</small>}
           </div>
 
           {/* Campo Email */}
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="email" className="font-semibold text-slate-700">
-              E-mail
-            </label>
+            <label htmlFor="email" className="font-semibold text-slate-700">E-mail</label>
             <input
               type="email"
               id="email"
               placeholder="seu.email@exemplo.com"
               className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              {...register("email", { 
+                required: "O e-mail é obrigatório",
+                pattern: { value: /^\S+@\S+$/i, message: "Endereço de e-mail inválido" }
+              })}
             />
+            {errors.email && <small className="text-red-500">{errors.email.message}</small>}
           </div>
 
           {/* Campo Mensagem */}
           <div className="flex flex-col gap-1.5">
-            <label htmlFor="mensagem" className="font-semibold text-slate-700">
-              Mensagem
-            </label>
+            <label htmlFor="mensagem" className="font-semibold text-slate-700">Mensagem</label>
             <textarea
               id="mensagem"
               rows={4}
               placeholder="Digite sua mensagem aqui..."
               className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
+              {...register("mensagem", { required: "A mensagem não pode estar em branco" })}
             />
+            {errors.mensagem && <small className="text-red-500">{errors.mensagem.message}</small>}
           </div>
 
-          
           <button
             type="submit"
             className="w-full bg-blue-800 text-white font-bold py-3 rounded-md hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
             Enviar Mensagem
           </button>
-
         </form>
       </div>
     </div>
