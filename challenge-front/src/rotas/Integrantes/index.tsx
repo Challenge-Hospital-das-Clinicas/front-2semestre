@@ -1,16 +1,15 @@
 const equipe = [
   {
     name: "Pedro Henrique Luiz Alves Duarte",
-    imgSrc: "/public/pedro.jpeg",
+    imgSrc: "/challenge-front/public/img/pedro.jpeg",
   },
   {
     name: "Gabriel Hayashi Monteiro",
-    imgSrc: "/public/gabriel.jpeg",
+    imgSrc: "/challenge-front/public/img/gabriel.jpeg",
   },
   {
     name: "Guilherme Macedo Martins",
-    imgSrc: "/public/macedo.jpeg",
-  },
+    imgSrc: "/challenge-front/public/img/WhatsApp Image 2025-09-26 at 15.25.47.jpeg",},
 ];
 
 export default function Integrantes() {
