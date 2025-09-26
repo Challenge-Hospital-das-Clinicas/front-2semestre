@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
- 
-export default function Menu(){
- 
-    return(
-        <nav className="cabecalh_nav">
-            <Link to="/">Home </Link>|
-            <Link to="/Contato"> Contato </Link>|
-            <Link to="/Faq"> FAQ </Link> |
-            <Link to="/Integrantes"> Equipe </Link> |
-            <Link to="/Tutorial"> Tutorial </Link>
-        </nav>
-    );
+
+export default function Menu() {
+  return (
+    <nav className="flex items-center gap-5">
+      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/">Home</Link>
+      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/Contato">Contato</Link>
+      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/Faq">FAQ</Link>
+      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/Integrantes">Equipe</Link>
+      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/Tutorial">Tutorial</Link>
+    </nav>
+  );
 }
