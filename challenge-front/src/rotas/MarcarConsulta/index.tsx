@@ -18,12 +18,12 @@ type AgendamentoFormData = {
 
 export default function MarcarConsulta() {
   const { register, handleSubmit, formState: { errors } } = useForm<AgendamentoFormData>();
-  const navigate = useNavigate(); // Hook para navegação programática
+  const navigate = useNavigate(); 
 
   const onSubmit = (data: AgendamentoFormData) => {
     console.log("Agendamento Válido:", data);
     alert("Agendamento recebido com sucesso! Redirecionando para a Home.");
-    // Redireciona o usuário para a Home após o sucesso
+
     navigate('/');
   };
 

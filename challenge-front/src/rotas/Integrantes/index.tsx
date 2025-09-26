@@ -1,15 +1,15 @@
 const equipe = [
   {
     name: "Pedro Henrique Luiz Alves Duarte",
-    imgSrc: "/challenge-front/src/img/pedro.jpeg",
+    imgSrc: "/public/pedro.jpeg",
   },
   {
     name: "Gabriel Hayashi Monteiro",
-    imgSrc: "/challenge-front/src/img/gabriel.jpeg",
+    imgSrc: "/public/gabriel.jpeg",
   },
   {
     name: "Guilherme Macedo Martins",
-    imgSrc: "/challenge-front/src/img/macedo.jpeg",
+    imgSrc: "/public/macedo.jpeg",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function Integrantes() {
               className="bg-white rounded-xl shadow-lg p-6 text-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
               <img
-                src={membro.imgSrc}
+                src={"/public/gabriel.jpeg"}
                 alt={`Foto de ${membro.name}`}
                 className="w-40 h-40 rounded-full mx-auto object-cover border-4 border-slate-200"
               />

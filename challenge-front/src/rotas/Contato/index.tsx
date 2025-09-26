@@ -30,10 +30,10 @@ export default function Contato() {
           </p>
         </div>
 
-        {/* O handleSubmit valida o formulário antes de chamar nossa função onSubmit */}
+       
         <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-6">
 
-          {/* Campo Nome */}
+         
           <div className="flex flex-col gap-1.5">
             <label htmlFor="nome" className="font-semibold text-slate-700">Nome</label>
             <input
@@ -41,17 +41,17 @@ export default function Contato() {
               id="nome"
               placeholder="Digite seu nome completo"
               className="w-full px-3 py-2 bg-slate-50 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-              // Registrando o campo com validação
+              
               {...register("nome", { 
                 required: "O nome é obrigatório",
                 minLength: { value: 2, message: "O nome deve ter no mínimo 2 caracteres" } 
               })}
             />
-            {/* Exibindo a mensagem de erro se houver */}
+            
             {errors.nome && <small className="text-red-500">{errors.nome.message}</small>}
           </div>
 
-          {/* Campo Email */}
+          
           <div className="flex flex-col gap-1.5">
             <label htmlFor="email" className="font-semibold text-slate-700">E-mail</label>
             <input
@@ -67,7 +67,7 @@ export default function Contato() {
             {errors.email && <small className="text-red-500">{errors.email.message}</small>}
           </div>
 
-          {/* Campo Mensagem */}
+          
           <div className="flex flex-col gap-1.5">
             <label htmlFor="mensagem" className="font-semibold text-slate-700">Mensagem</label>
             <textarea

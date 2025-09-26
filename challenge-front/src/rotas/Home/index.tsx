@@ -33,7 +33,7 @@ export default function Home() {
           Conheça Nossa Equipe
         </h2>
         <p className="mt-2 max-w-2xl mx-auto text-slate-600">
-          Profissionais dedicados e qualificados para oferecer o melhor atendimento.
+            Os desenvolvedores do site
         </p>
         <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           
