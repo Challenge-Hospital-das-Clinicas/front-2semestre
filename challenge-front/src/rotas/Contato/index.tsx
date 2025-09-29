@@ -15,7 +15,7 @@ export default function Contato() {
   const onSubmit = (data: ContatoFormData) => {
     console.log("Formulário de contato válido!", data);
     alert(`Obrigado pelo contato, ${data.nome}!`);
-    // Aqui viria a lógica para enviar os dados para uma API
+    
   };
 
   return (
