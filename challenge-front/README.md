@@ -1,73 +1,59 @@
-# React + TypeScript + Vite
+Projeto: Vitrine de Equipe - Challenge Front-End
+Este projeto é uma aplicação web desenvolvida como parte de um desafio de front-end. O objetivo principal é apresentar os membros de uma equipe em um layout moderno e responsivo, utilizando tecnologias de ponta do ecossistema React.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Informações para Manipular o Sistema
+Esta seção contém todos os detalhes técnicos para entender, instalar e executar o projeto.
 
-Currently, two official plugins are available:
+✨ Tecnologias Utilizadas
+O projeto foi construído com as seguintes tecnologias:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React: Biblioteca para construir interfaces de usuário.
 
-## React Compiler
+Vite: Ferramenta de build moderna e ultrarrápida para desenvolvimento front-end.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+TypeScript: Superset do JavaScript que adiciona tipagem estática, aumentando a robustez do código.
 
-## Expanding the ESLint configuration
+Tailwind CSS: Framework de CSS utility-first para criar designs customizados rapidamente.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+🧑‍💻 Integrantes da Equipe
+Este projeto foi desenvolvido pela seguinte equipe:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Pedro Henrique Luiz Alves Duarte
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Gabriel Hayashi Monteiro
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Guilherme Macedo Martins
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🖼️ Imagens e Ícones
+O projeto utiliza imagens locais para a exibição das fotos dos integrantes. Os arquivos de imagem estão localizados no diretório src/assets/img/ e são importados diretamente no componente React, garantindo que sejam processados corretamente pelo Vite durante o build.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+📁 Estrutura de Pastas do Projeto
+A estrutura de pastas segue o padrão de projetos Vite + React, organizada da seguinte forma:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+              
+├── src/
+│   ├── assets/           # Imagens, fontes, etc.
+│   │   └── img/
+│   │       ├── gabriel.jpeg
+│   │       ├── guilherme.jpeg
+│   │       └── pedro.jpeg
+│   ├── components/       # Componentes React reutilizáveis
+│   │   └── Integrantes.jsx
+│   ├── App.jsx           # Componente principal da aplicação
+│   └── main.jsx          # Ponto de entrada da aplicação
+├── .eslintrc.cjs         # Configurações do ESLint
+├── index.html            # Arquivo HTML principal
+├── package.json          # Dependências e scripts do projeto
+├── README.md             # Documentação do projeto
+└── vite.config.js        # Configurações do Vite
+🐙 Link do GitHub
+O código-fonte completo do projeto está disponível no GitHub. Sinta-se à vontade para clonar, explorar e contribuir.
+
+🔗 Acesse o Repositório no GitHub
+
+Atenção: [Substitua https://github.com/SEU-USUARIO/SEU-REPOSITORIO](https://github.com/Challenge-Hospital-das-Clinicas/front-2semestre.git) 
+
+
+
+🎥 Vídeo de Apresentação no YouTube
+Preparamos um vídeo demonstrando as funcionalidades do projeto, explicando as tecnologias utilizadas e o processo de desenvolvimento.
