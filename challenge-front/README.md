@@ -51,7 +51,7 @@ O código-fonte completo do projeto está disponível no GitHub. Sinta-se à von
 
 🔗 Acesse o Repositório no GitHub
 
-Atenção: [Substitua https://github.com/SEU-USUARIO/SEU-REPOSITORIO](https://github.com/Challenge-Hospital-das-Clinicas/front-2semestre.git) 
+Atenção:(https://github.com/Challenge-Hospital-das-Clinicas/front-2semestre.git) 
 
 
 
