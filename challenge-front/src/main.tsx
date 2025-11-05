@@ -2,26 +2,26 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-// 1. Importa o CSS Global (que importa o Tailwind)
 import './index.css'
 
-// 2. Importa o Layout Principal
 import App from './App.tsx'
 
-// 3. Importa TODAS as nossas páginas (Usando a sua estrutura 'src/rotas/')
 import Home from './rotas/home/index.tsx'
 import Contato from './rotas/contato/index.tsx'
 import Faq from './rotas/faq/index.tsx'
 import Integrantes from './rotas/integrantes/index.tsx'
 import Tutorial from './rotas/tutorial/index.tsx'
 import MarcarConsulta from './rotas/marcarConsulta/index.tsx'
-import Medico from './rotas/medicos/index.tsx' // <-- Corrigido!
+import ErrorPage from './rotas/error/index.tsx' 
 
-// 4. Cria o roteador
+import AdminGeral from './rotas/AdminGeral/index.tsx' 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />, 
+    errorElement: <ErrorPage />, 
     
     children: [
       {
@@ -49,14 +49,16 @@ const router = createBrowserRouter([
         element: <MarcarConsulta />,
       },
       {
-        path: "/medico", // A URL que você vai acessar
-        element: <Medico />, // O componente que vai carregar (o CRUD)
+        
+        path: "/admin", 
+        element: <AdminGeral /> 
       },
     ],
   },
 ]);
 
-// 5. Renderiza a aplicação
+
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <RouterProvider router={router} />

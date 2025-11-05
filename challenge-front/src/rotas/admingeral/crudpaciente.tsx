@@ -15,7 +15,7 @@ export default function CrudPaciente() {
   const [enderecos, setEnderecos] = useState<Endereco[]>([]);
   const [convenios, setConvenios] = useState<Convenio[]>([]);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<PacienteFormData>({ defaultValues: defaultFormValues });
-  const API_URL = 'https://hospitaltech-api-latest.onrender.com';
+  const API_URL = 'https://hospitaltech-api-latest.onrender.com/q/swagger-ui/#/';
 
   const fetchDados = async () => {
     setLoading(true); setError(null);

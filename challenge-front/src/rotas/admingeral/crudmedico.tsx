@@ -11,7 +11,7 @@ export default function CrudMedicos() {
   const [error, setError] = useState<string | null>(null);
   const [editingDoctor, setEditingDoctor] = useState<MedicoDaLista | null>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<MedicoFormData>({ defaultValues: defaultFormValues });
-  const API_URL = 'https://hospitaltech-api-latest.onrender.com';
+  const API_URL = 'https://hospitaltech-api-latest.onrender.com/q/swagger-ui/#/';
 
   const fetchMedicos = async () => {
     setLoading(true); setError(null);

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 
-// --- TIPOS (Baseado no POST/PUT do cURL) ---
 type Convenio = {
   id: number;
   nome: string;
@@ -13,7 +12,6 @@ type ConvenioFormData = {
   cobertura: string;
 };
 
-// VALORES PADRÃO DO FORMULÁRIO
 const defaultFormValues: ConvenioFormData = {
   nome: '',
   cobertura: ''
@@ -29,7 +27,7 @@ export default function CrudConvenio() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ConvenioFormData>({
     defaultValues: defaultFormValues
   });
-  const API_URL = 'https://hospitaltech-api-latest.onrender.com';
+  const API_URL = 'https://hospitaltech-api-latest.onrender.com/q/swagger-ui/#/';
 
   const fetchConvenios = async () => {
     setLoading(true);

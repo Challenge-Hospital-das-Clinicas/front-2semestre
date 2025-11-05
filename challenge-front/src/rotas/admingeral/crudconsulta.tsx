@@ -70,7 +70,7 @@ export default function CrudConsulta() {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ConsultaFormData>({
     defaultValues: defaultFormValues
   });
-  const API_URL = 'https://hospitaltech-api-latest.onrender.com';
+  const API_URL = 'https://hospitaltech-api-latest.onrender.com/q/swagger-ui/#/';
 
   const fetchDados = async () => {
     setLoading(true); setError(null);

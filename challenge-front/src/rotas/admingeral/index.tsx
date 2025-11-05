@@ -1,21 +1,17 @@
 import { useState } from 'react';
 
-// 1. Importa todos os nossos CRUDs
-import CrudMedicos from './CrudMedicos';
+import CrudMedicos from './CrudMedico'; 
 import CrudConvenio from './CrudConvenio';
 import CrudEndereco from './CrudEndereco';
 import CrudEspecialidade from './CrudEspecialidade';
 import CrudPaciente from './CrudPaciente';
 import CrudConsulta from './CrudConsulta';
 
-// 2. Define os nomes das nossas abas
 type Aba = 'consultas' | 'pacientes' | 'medicos' | 'convenios' | 'enderecos' | 'especialidades';
 
 export default function AdminGeral() {
-  // 3. Estado para controlar qual aba está ativa
-  const [abaAtiva, setAbaAtiva] = useState<Aba>('consultas'); // Começa em Consultas
+  const [abaAtiva, setAbaAtiva] = useState<Aba>('consultas'); 
 
-  // 4. Função para renderizar o componente da aba certa
   const renderAba = () => {
     switch (abaAtiva) {
       case 'consultas':
@@ -23,7 +19,7 @@ export default function AdminGeral() {
       case 'pacientes':
         return <CrudPaciente />;
       case 'medicos':
-        return <CrudMedicos />;
+        return <CrudMedicos />; 
       case 'convenios':
         return <CrudConvenio />;
       case 'enderecos':
@@ -35,7 +31,6 @@ export default function AdminGeral() {
     }
   };
 
-  // Helper para mudar o estilo da aba ativa
   const getButtonClass = (aba: Aba) => {
     return `px-4 py-2 font-medium rounded-t-lg ${
       abaAtiva === aba
@@ -46,7 +41,7 @@ export default function AdminGeral() {
 
   return (
     <div className="py-10 px-4 bg-slate-50">
-      <div className="mx-auto max-w-7xl"> {/* Container bem largo */}
+      <div className="mx-auto max-w-7xl"> {}
         
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-slate-800 tracking-tight">
@@ -57,7 +52,7 @@ export default function AdminGeral() {
           </p>
         </div>
 
-        {/* 5. As ABAS (Botões de Navegação) */}
+        {}
         <div className="flex flex-wrap border-b border-blue-600 bg-blue-900 rounded-t-lg">
           <button className={getButtonClass('consultas')} onClick={() => setAbaAtiva('consultas')}>
             Consultas
@@ -79,7 +74,7 @@ export default function AdminGeral() {
           </button>
         </div>
         
-        {/* 6. O CONTEÚDO (Onde o CRUD aparece) */}
+        {}
         <div className="bg-white rounded-b-xl shadow-lg p-8">
           {renderAba()}
         </div>
