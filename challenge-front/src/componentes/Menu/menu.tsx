@@ -1,13 +1,28 @@
 import { Link } from "react-router-dom";
 
-export default function Menu() {
+type MenuProps = {
+  isMobile?: boolean; 
+}
+
+export default function Menu({ isMobile = false }: MenuProps) {
+  
+  
+  const navClasses = isMobile
+    ? "flex flex-col items-center p-4" 
+    : "flex items-center gap-5";      
+
+  
+  const linkClasses = isMobile
+    ? "w-full text-center py-3 text-lg hover:bg-blue-800 transition-colors" 
+    : "text-lg font-bold transition-colors hover:text-sky-300"; 
+
   return (
-    <nav className="flex items-center gap-5">
-      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/">Home</Link>
-      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/Contato">Contato</Link>
-      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/Faq">FAQ</Link>
-      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/Integrantes">Equipe</Link>
-      <Link className="text-lg font-bold transition-colors hover:text-sky-300" to="/Tutorial">Tutorial</Link>
+    <nav className={navClasses}>
+      <Link className={linkClasses} to="/">Home</Link>
+      <Link className={linkClasses} to="/Contato">Contato</Link>
+      <Link className={linkClasses} to="/Faq">FAQ</Link>
+      <Link className={linkClasses} to="/Integrantes">Equipe</Link>
+      <Link className={linkClasses} to="/Tutorial">Tutorial</Link>
     </nav>
   );
 }

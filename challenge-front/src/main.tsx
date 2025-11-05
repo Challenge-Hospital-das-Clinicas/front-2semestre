@@ -7,12 +7,12 @@ import './index.css'
 import App from './App.tsx'
 
 
-import Home from './rotas/Home/index.tsx'
-import Contato from './rotas/Contato/index.tsx'
-import Faq from './rotas/Faq/index.tsx'
-import Integrantes from './rotas/Integrantes/index.tsx'
-import Tutorial from './rotas/Tutorial/index.tsx'
-import MarcarConsulta from './rotas/MarcarConsulta/index.tsx'
+import Home from './rotas/home/index.tsx'
+import Contato from './rotas/contato/index.tsx'
+import Faq from './rotas/faq/index.tsx'
+import Integrantes from './rotas/integrantes/index.tsx'
+import Tutorial from './rotas/tutorial/index.tsx'
+import MarcarConsulta from './rotas/marcarConsulta/index.tsx'
 
 
 const router = createBrowserRouter([
