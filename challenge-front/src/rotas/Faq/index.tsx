@@ -1,4 +1,3 @@
-
 const faqData = [
   {
     question: "1. Como posso entrar em contato com a equipe?",
@@ -24,13 +23,9 @@ const faqData = [
 
 export default function Faq() {
   return (
-   
     <div className="py-10 px-4">
-
-      
-      <div className="mx-auto max-w-3xl bg-white rounded-xl shadow-lg p-8">
-        
-        
+      {}
+      <div className="mx-auto max-w-3xl xl:max-w-5xl bg-white rounded-xl shadow-lg p-8">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-slate-800 tracking-tight">
             Dúvidas Frequentes
@@ -40,9 +35,7 @@ export default function Faq() {
           </p>
         </div>
 
-        
         <div className="space-y-6">
-          
           {faqData.map((item, index) => (
             <div key={index}>
               <h2 className="text-lg font-semibold text-slate-800">
@@ -54,7 +47,6 @@ export default function Faq() {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );

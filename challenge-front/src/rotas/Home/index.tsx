@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom';
 
-
 const equipePreview = [
   { name: 'Pedro Henrique' },
-  { name: 'Gabriel Hayashi' },
   { name: 'Guilherme Macedo' },
 ];
 
@@ -11,7 +9,7 @@ export default function Home() {
   return (
     <div className="bg-slate-50">
 
-      
+      {}
       <section className="bg-blue-800 text-white text-center py-20 px-4">
         <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight">
           Cuidando da sua Saúde com Excelência
@@ -27,16 +25,17 @@ export default function Home() {
         </Link>
       </section>
 
-      
+      {}
       <section className="py-16 px-4 text-center">
         <h2 className="text-3xl font-bold text-slate-800">
           Conheça Nossa Equipe
         </h2>
         <p className="mt-2 max-w-2xl mx-auto text-slate-600">
-            Os desenvolvedores do site
+          Profissionais dedicados e qualificados para oferecer o melhor atendimento.
         </p>
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          
+        
+        {}
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-5xl xl:max-w-7xl mx-auto">
           {equipePreview.map((membro) => (
             <div key={membro.name} className="bg-white p-6 rounded-xl shadow-lg flex items-center justify-center h-40">
               <h3 className="text-xl font-semibold text-slate-800 text-center">{membro.name}</h3>
@@ -51,9 +50,9 @@ export default function Home() {
         </Link>
       </section>
 
-     
+      {}
       <section className="bg-slate-100 py-16 px-4">
-        <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 text-center">
+        <div className="grid md:grid-cols-2 gap-8 text-center max-w-5xl xl:max-w-7xl mx-auto">
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h3 className="text-2xl font-bold text-slate-800">Dúvidas Frequentes</h3>
             <p className="mt-2 text-slate-600">
@@ -80,7 +79,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
     </div>
   );
 }

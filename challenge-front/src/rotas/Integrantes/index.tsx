@@ -1,29 +1,39 @@
 import pedro from "../../assets/img/pedro.jpeg"; 
 import guilherme from "../../assets/img/WhatsApp Image 2025-09-26 at 15.25.47.jpeg";
 
+
 const equipe = [
   {
     name: "Pedro Henrique Luiz Alves Duarte",
     imgSrc: pedro,
-    rm: "563405",  
-    turma: "1TDSPF", 
+    rm: "563405",
+    turma: "1TDSPF",
   },
-  
   {
     name: "Guilherme Macedo Martins",
     imgSrc: guilherme,
-    rm: "562396",   
-    turma: "1TDSPF", 
+    rm: "562396",
+    turma: "1TDSPF",
   },
 ];
 
 export default function Integrantes() {
   return (
     <div className="py-10 px-4 bg-slate-50">
-      <div className="mx-auto max-w-5xl">
+      
+      {}
+      <div className="mx-auto max-w-5xl xl:max-w-7xl">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl font-bold text-slate-800 tracking-tight">
+            Nossa Equipe
+          </h1>
+          <p className="mt-2 text-lg text-slate-600">
+            Conheça os profissionais por trás do nosso atendimento.
+          </p>
+        </div>
+
         {}
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center">
           {equipe.map((membro) => (
             <div 
               key={membro.name} 
@@ -38,14 +48,12 @@ export default function Integrantes() {
                 {membro.name}
               </h2>
               
-              {}
               <p className="mt-2 text-slate-600 font-medium">
                 RM: {membro.rm}
               </p>
               <p className="text-slate-600 font-medium">
                 Turma: {membro.turma}
               </p>
-
             </div>
           ))}
         </div>

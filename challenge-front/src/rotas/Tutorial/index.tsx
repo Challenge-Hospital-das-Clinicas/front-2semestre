@@ -1,4 +1,3 @@
-// Array com os dados das dicas. Fácil de atualizar e manter.
 const dicas = [
   {
     title: "1. Mantenha seus dados atualizados",
@@ -28,13 +27,9 @@ const dicas = [
 
 export default function Tutorial() {
   return (
-    // Container principal da página
     <div className="py-10 px-4 bg-slate-50">
-
-      {/* Card centralizado para manter a consistência visual */}
-      <div className="mx-auto max-w-3xl bg-white rounded-xl shadow-lg p-8">
-        
-        {/* Seção de Título */}
+      {}
+      <div className="mx-auto max-w-3xl xl:max-w-5xl bg-white rounded-xl shadow-lg p-8">
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-slate-800 tracking-tight">
             Dicas e Tutoriais
@@ -44,10 +39,7 @@ export default function Tutorial() {
           </p>
         </div>
 
-        {/* Lista de Dicas com separadores */}
         <div className="space-y-6 divide-y divide-slate-200">
-          
-          {/* Usamos .map() para renderizar cada dica dinamicamente */}
           {dicas.map((dica, index) => (
             <div key={index} className={index > 0 ? 'pt-6' : ''}>
               <h2 className="text-xl font-semibold text-slate-800">
@@ -59,7 +51,6 @@ export default function Tutorial() {
             </div>
           ))}
         </div>
-
       </div>
     </div>
   );
