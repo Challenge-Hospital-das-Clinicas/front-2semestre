@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 const equipePreview = [
   { name: 'Pedro Henrique' },
-  { name: 'Gabriel Hayashi' },
   { name: 'Guilherme Macedo' },
 ];
 
