@@ -11,7 +11,7 @@ export default function CrudEndereco() {
   const [error, setError] = useState<string | null>(null);
   const [editingEndereco, setEditingEndereco] = useState<Endereco | null>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<EnderecoFormData>({ defaultValues: defaultFormValues });
-  const API_URL = '/api'; 
+  const API_URL = '/api';
 
   const fetchEnderecos = async () => {
     setLoading(true); setError(null);
@@ -121,7 +121,7 @@ export default function CrudEndereco() {
         </div>
         <div className="flex gap-4">
           <button type="submit" className={`w-full font-bold py-3 rounded-md ${editingEndereco ? 'bg-blue-700' : 'bg-green-700'} text-white`}>
-            {editingEndereco ? 'Salvar Alterações (PUT)' : 'Salvar Novo Endereço (POST)'}
+            {editingEndereco ? 'Salvar Alterações' : 'Salvar Novo Endereço'}
           </button>
           {editingEndereco && (
             <button type="button" onClick={handleCancelEdit} className="w-1/3 bg-slate-500 text-white font-bold py-3 rounded-md">
@@ -131,7 +131,7 @@ export default function CrudEndereco() {
         </div>
       </form>
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Endereços Cadastrados (GET)</h2>
+        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Endereços Cadastrados</h2>
         {loading && <p>Carregando...</p>}
         {error && <p className="text-red-500">{error}</p>}
         {!loading && !error && (

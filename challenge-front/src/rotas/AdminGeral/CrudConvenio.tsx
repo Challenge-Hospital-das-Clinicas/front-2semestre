@@ -11,7 +11,7 @@ export default function CrudConvenio() {
   const [error, setError] = useState<string | null>(null);
   const [editingConvenio, setEditingConvenio] = useState<Convenio | null>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<ConvenioFormData>({ defaultValues: defaultFormValues });
-  const API_URL = '/api'; 
+  const API_URL = '/api';
 
   const fetchConvenios = async () => {
     setLoading(true); setError(null);
@@ -104,7 +104,7 @@ export default function CrudConvenio() {
         </div>
         <div className="flex gap-4">
           <button type="submit" className={`w-full font-bold py-3 rounded-md ${editingConvenio ? 'bg-blue-700' : 'bg-green-700'} text-white`}>
-            {editingConvenio ? 'Salvar Alterações (PUT)' : 'Salvar Novo Convênio (POST)'}
+            {editingConvenio ? 'Salvar Alterações' : 'Salvar Novo Convênio'}
           </button>
           {editingConvenio && (
             <button type="button" onClick={handleCancelEdit} className="w-1/3 bg-slate-500 text-white font-bold py-3 rounded-md">
@@ -114,7 +114,7 @@ export default function CrudConvenio() {
         </div>
       </form>
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Convênios Cadastrados (GET)</h2>
+        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Convênios Cadastrados</h2>
         {loading && <p>Carregando...</p>}
         {error && <p className="text-red-500">{error}</p>}
         {!loading && !error && (
