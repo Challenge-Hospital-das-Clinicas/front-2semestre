@@ -11,7 +11,7 @@ export default function CrudMedico() {
   const [error, setError] = useState<string | null>(null);
   const [editingDoctor, setEditingDoctor] = useState<MedicoDaLista | null>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<MedicoFormData>({ defaultValues: defaultFormValues });
-  const API_URL = '/api'; 
+  const API_URL = '/api';
 
   const fetchMedicos = async () => {
     setLoading(true); setError(null);
@@ -119,7 +119,7 @@ export default function CrudMedico() {
         </div>
         <div className="flex gap-4">
           <button type="submit" className={`w-full font-bold py-3 rounded-md ${editingDoctor ? 'bg-blue-700' : 'bg-green-700'} text-white`}>
-            {editingDoctor ? 'Salvar Alterações (PUT)' : 'Salvar Novo Médico (POST)'}
+            {editingDoctor ? 'Salvar Alterações' : 'Salvar Novo Médico'}
           </button>
           {editingDoctor && (
             <button type="button" onClick={handleCancelEdit} className="w-1/3 bg-slate-500 text-white font-bold py-3 rounded-md">
@@ -129,7 +129,7 @@ export default function CrudMedico() {
         </div>
       </form>
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Médicos Cadastrados (GET)</h2>
+        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Médicos Cadastrados</h2>
         {loading && <p>Carregando lista...</p>}
         {error && <p className="text-red-500">{error}</p>}
         {!loading && !error && (

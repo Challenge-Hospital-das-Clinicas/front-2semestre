@@ -11,7 +11,7 @@ export default function CrudEspecialidade() {
   const [error, setError] = useState<string | null>(null);
   const [editingEspecialidade, setEditingEspecialidade] = useState<Especialidade | null>(null);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<EspecialidadeFormData>({ defaultValues: defaultFormValues });
-  const API_URL = '/api'; 
+  const API_URL = '/api';
 
   const fetchEspecialidades = async () => {
     setLoading(true); setError(null);
@@ -98,7 +98,7 @@ export default function CrudEspecialidade() {
           </div>
           <div className="flex items-end">
             <button type="submit" className={`w-full font-bold py-3 rounded-md ${editingEspecialidade ? 'bg-blue-700' : 'bg-green-700'} text-white`}>
-              {editingEspecialidade ? 'Salvar Alterações (PUT)' : 'Salvar (POST)'}
+              {editingEspecialidade ? 'Salvar Alterações' : 'Salvar'}
             </button>
             {editingEspecialidade && (
               <button type="button" onClick={handleCancelEdit} className="w-1/2 ml-4 bg-slate-500 text-white font-bold py-3 rounded-md">
@@ -109,7 +109,7 @@ export default function CrudEspecialidade() {
         </div>
       </form>
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Especialidades Cadastradas (GET)</h2>
+        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Especialidades Cadastradas</h2>
         {loading && <p>Carregando...</p>}
         {error && <p className="text-red-500">{error}</p>}
         {!loading && !error && (

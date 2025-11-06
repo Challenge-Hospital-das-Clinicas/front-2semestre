@@ -5,9 +5,8 @@ type MenuProps = {
 }
 
 export default function Menu({ isMobile = false }: MenuProps) {
-  
   const navClasses = isMobile
-    ? "flex flex-col items-center p-4" 
+    ? "flex flex-col items-center p-4"
     : "flex items-center justify-center flex-wrap gap-x-5 gap-y-2"; 
 
   const linkClasses = isMobile

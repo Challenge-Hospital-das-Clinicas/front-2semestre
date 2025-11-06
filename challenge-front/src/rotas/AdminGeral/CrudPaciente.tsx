@@ -15,7 +15,7 @@ export default function CrudPaciente() {
   const [enderecos, setEnderecos] = useState<Endereco[]>([]);
   const [convenios, setConvenios] = useState<Convenio[]>([]);
   const { register, handleSubmit, formState: { errors }, reset } = useForm<PacienteFormData>({ defaultValues: defaultFormValues });
-  const API_URL = '/api'; 
+  const API_URL = '/api';
 
   const fetchDados = async () => {
     setLoading(true); setError(null);
@@ -165,7 +165,7 @@ export default function CrudPaciente() {
         </div>
         <div className="flex gap-4">
           <button type="submit" className={`w-full font-bold py-3 rounded-md ${editingPaciente ? 'bg-blue-700' : 'bg-green-700'} text-white`}>
-            {editingPaciente ? 'Salvar Alterações (PUT)' : 'Salvar Novo Paciente (POST)'}
+            {editingPaciente ? 'Salvar Alterações' : 'Salvar Novo Paciente'}
           </button>
           {editingPaciente && (
             <button type="button" onClick={handleCancelEdit} className="w-1/3 bg-slate-500 text-white font-bold py-3 rounded-md">
@@ -175,7 +175,7 @@ export default function CrudPaciente() {
         </div>
       </form>
       <div className="mt-10">
-        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Pacientes Cadastrados (GET)</h2>
+        <h2 className="text-2xl font-semibold text-slate-700 mb-6">Pacientes Cadastrados</h2>
         {loading && <p>Carregando...</p>}
         {error && <p className="text-red-500">{error}</p>}
         {!loading && !error && (
