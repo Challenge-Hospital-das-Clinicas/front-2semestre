@@ -8,16 +8,13 @@ export default defineConfig({
     tailwindcss()
   ],
 
- 
   server: {
     proxy: {
-  
       '/api': {
-      
-        target: 'https://hospitaltech-api-latest.onrender.com/q/swagger-ui/#/',
-       
+        
+        target: 'https://hospitaltech-api-latest.onrender.com',
+        
         changeOrigin: true,
-       
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
