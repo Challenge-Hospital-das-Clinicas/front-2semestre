@@ -14,7 +14,7 @@ export default defineConfig({
   
       '/api': {
       
-        target: 'https://hospitaltech-api-latest.onrender.com',
+        target: 'https://hospitaltech-api-latest.onrender.com/q/swagger-ui/#/',
        
         changeOrigin: true,
        
