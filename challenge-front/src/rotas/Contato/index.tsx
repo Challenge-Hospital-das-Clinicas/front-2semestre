@@ -16,13 +16,13 @@ export default function Contato() {
 
   return (
     <div className="py-10 sm:py-16 px-4">
-      {/* Alterado para max-w-5xl para acomodar as duas colunas */}
+      {}
       <div className="mx-auto max-w-5xl bg-white rounded-xl shadow-lg p-6 sm:p-8">
         
-        {/* Container Grid que ativa o layout de 2 colunas em telas médias (md) ou maiores */}
+        {}
         <div className="md:grid md:grid-cols-2 md:gap-12">
 
-          {/* --- Coluna da Esquerda: Texto de Apresentação --- */}
+          {}
           <div className="text-center md:text-left mb-8 md:mb-0">
             <h1 className="text-2xl sm:text-3xl font-bold text-slate-800 tracking-tight">
               Entre em Contato
@@ -30,14 +30,14 @@ export default function Contato() {
             <p className="mt-2 text-slate-600">
               Estamos aqui para ajudar. Preencha o formulário ao lado e nossa equipe retornará o mais breve possível.
             </p>
-            {/* Você pode adicionar mais informações de contato aqui, como telefone, endereço, etc. */}
+            {}
             <div className="mt-8 text-left hidden md:block">
                 <p className="text-slate-700 font-semibold"><strong>Email:</strong> contato@healthclinic.com</p>
                 <p className="text-slate-700 font-semibold mt-2"><strong>Telefone:</strong> (11) 98765-4321</p>
             </div>
           </div>
 
-          {/* --- Coluna da Direita: Formulário --- */}
+          {}
           <div>
             <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-6">
               <div className="flex flex-col gap-1.5">
