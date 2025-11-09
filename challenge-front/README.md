@@ -1,3 +1,74 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+# 🏥 Frontend – Sprint 4  
+**Projeto:** Challenge Hospital das Clínicas  
+**Curso:** Análise e Desenvolvimento de Sistemas – FIAP  
+**Equipe:** BDB Team  
+
+link do video - https://youtu.be/kQmOOXfxa30
+
+link do repositorio - 
+
+---
+
+## 👥 Integrantes
+- **Pedro Henrique Luiz Alves Duarte** – RM563405  
+- **Guilherme Macedo Martins** – RM562396  
+ 
+
+---
+
+## 🚀 Sobre o Projeto
+O **Frontend da Sprint 4** faz parte do desafio integrador da FIAP com o **Hospital das Clínicas**, onde o objetivo é desenvolver uma aplicação web intuitiva e funcional para apoiar o sistema hospitalar.  
+
+A solução tem foco em **acessibilidade digital**, **usabilidade** e **integração com o backend em Java + Oracle**, criado também pela equipe BDB.
+
+---
+
+## 💻 Tecnologias Utilizadas
+- **HTML5**  
+- **CSS3 (Tailwind CSS)**  
+- **JavaScript (ES6+)**  
+- **Node.js & npm**  
+- **React / Vite** *(dependendo do setup do grupo)*  
+- **Axios (para integração com API Java)**  
+
+---
+
+## 🧠 Principais Funcionalidades
+- 📋 **Cadastro de Pacientes**  
+- 🩺 **Listagem de Consultas e Prontuários**  
+- 🧑‍⚕️ **Gestão de Médicos e Especialidades**  
+- 📞 **Atendimento via Teleconsulta (simulação)**  
+- ⚙️ **Integração completa com API REST do Backend**
+
+---
+
+## 🔗 Integração com Backend
+- **API Java (Quarkus)** hospedada no Render  
+- **Banco de Dados:** Oracle  
+- Comunicação via **endpoints RESTful**  
+- Testes realizados com **Swagger UI**
+
+---
+
+## 📂 Estrutura do Projeto
+```
+challenge-front/
+│
+├── src/
+│   ├── assets/         # Imagens e ícones
+│   ├── components/     # Componentes reutilizáveis
+│   ├── pages/          # Páginas principais da aplicação
+│   ├── rotas/          # Configuração de rotas
+│   └── utils/          # Funções auxiliares
+│
+├── package.json
+├── tailwind.config.js
+└── README.md
+=======
+>>>>>>> develop
 # 🏥 Projeto: HospitalTech - Painel Administrativo (CRUDs)
 
 ### 🧑‍💻 Integrantes da Equipe
@@ -93,18 +164,76 @@ challenge-front/
 ├── package.json                     # Dependências e scripts
 ├── README.md                        # Documentação do projeto
 └── vite.config.ts                   # Configurações do Vite (Proxy da API)
+<<<<<<< HEAD
+=======
+>>>>>>> 007001ba07957fea6e22f29fa35d0f28f16e7906
+>>>>>>> develop
 ```
 
 ---
 
+<<<<<<< HEAD
 ### 🐙 Link do GitHub
 
 O código-fonte completo do projeto, incluindo todo o histórico de commits e o Gitflow, está disponível no GitHub:
+=======
+<<<<<<< HEAD
+## ⚙️ Como Executar o Projeto
+
+### 🔧 Pré-requisitos
+- Node.js e npm instalados  
+- Git configurado  
+=======
+### 🐙 Link do GitHub
+
+O código-fonte completo do projeto, incluindo todo o histórico de commits e o Gitflow, está disponível no GitHub:
+>>>>>>> 007001ba07957fea6e22f29fa35d0f28f16e7906
+
+### ▶️ Passos
+```bash
+# Clonar o repositório
+git clone https://github.com/Sprint-4/Frontend-sprint4.git
+
+# Entrar na pasta
+cd Frontend-sprint4
+
+<<<<<<< HEAD
+# Instalar dependências
+npm install
+
+# Rodar o projeto
+npm run dev
+```
+
+---
+
+## 📸 Protótipos e Telas
+*(Adicione aqui prints das principais telas do sistema ou link para o Figma)*
+
+---
+
+## 🧩 Contribuição
+Sinta-se à vontade para contribuir com melhorias, ajustes ou sugestões!  
+Basta criar uma branch, fazer suas alterações e abrir um pull request. 💡  
+
+---
+
+## 📜 Licença
+Projeto acadêmico desenvolvido para fins educacionais – FIAP © 2025  
+Todos os direitos reservados à equipe **BDB**.  
+=======
+---
+
+### 🎥 Vídeo de Apresentação no YouTube
+
+O vídeo demonstra o sistema completo — incluindo a responsividade, a navegação entre as páginas e o funcionamento da área administrativa com os 6 CRUDs integrados à API Java em tempo real.
+>>>>>>> develop
 
 
 
 ---
 
+<<<<<<< HEAD
 ### 🎥 Vídeo de Apresentação no YouTube
 
 O vídeo demonstra o sistema completo — incluindo a responsividade, a navegação entre as páginas e o funcionamento da área administrativa com os 6 CRUDs integrados à API Java em tempo real.
@@ -114,3 +243,7 @@ O vídeo demonstra o sistema completo — incluindo a responsividade, a navegaç
 ---
 
 > 📘 Desenvolvido com dedicação para o Challenge da FIAP — Sprint 4 – 2025.
+=======
+> 📘 Desenvolvido com dedicação para o Challenge da FIAP — Sprint 4 – 2025.
+>>>>>>> 007001ba07957fea6e22f29fa35d0f28f16e7906
+>>>>>>> develop
