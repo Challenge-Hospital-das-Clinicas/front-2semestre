@@ -1,61 +1,107 @@
-Projeto: Vitrine de Equipe - Challenge Front-End
-Este projeto é uma aplicação web desenvolvida como parte de um desafio de front-end. O objetivo principal é apresentar os membros de uma equipe em um layout moderno e responsivo, utilizando tecnologias de ponta do ecossistema React.
+# 🏥 Frontend – Sprint 4  
+**Projeto:** Challenge Hospital das Clínicas  
+**Curso:** Análise e Desenvolvimento de Sistemas – FIAP  
+**Equipe:** BDB Team  
 
-🚀 Informações para Manipular o Sistema
-Esta seção contém todos os detalhes técnicos para entender, instalar e executar o projeto.
+link do video - https://youtu.be/kQmOOXfxa30
 
-✨ Tecnologias Utilizadas
-O projeto foi construído com as seguintes tecnologias:
+link do repositorio - 
 
-React: Biblioteca para construir interfaces de usuário.
+---
 
-Vite: Ferramenta de build moderna e ultrarrápida para desenvolvimento front-end.
+## 👥 Integrantes
+- **Pedro Henrique Luiz Alves Duarte** – RM563405  
+- **Guilherme Macedo Martins** – RM562396  
+ 
 
-TypeScript: Superset do JavaScript que adiciona tipagem estática, aumentando a robustez do código.
+---
 
-Tailwind CSS: Framework de CSS utility-first para criar designs customizados rapidamente.
+## 🚀 Sobre o Projeto
+O **Frontend da Sprint 4** faz parte do desafio integrador da FIAP com o **Hospital das Clínicas**, onde o objetivo é desenvolver uma aplicação web intuitiva e funcional para apoiar o sistema hospitalar.  
 
-🧑‍💻 Integrantes da Equipe
-Este projeto foi desenvolvido pela seguinte equipe:
+A solução tem foco em **acessibilidade digital**, **usabilidade** e **integração com o backend em Java + Oracle**, criado também pela equipe BDB.
 
-Pedro Henrique Luiz Alves Duarte
+---
 
-Gabriel Hayashi Monteiro
+## 💻 Tecnologias Utilizadas
+- **HTML5**  
+- **CSS3 (Tailwind CSS)**  
+- **JavaScript (ES6+)**  
+- **Node.js & npm**  
+- **React / Vite** *(dependendo do setup do grupo)*  
+- **Axios (para integração com API Java)**  
 
-Guilherme Macedo Martins
+---
 
-🖼️ Imagens e Ícones
-O projeto utiliza imagens locais para a exibição das fotos dos integrantes. Os arquivos de imagem estão localizados no diretório src/assets/img/ e são importados diretamente no componente React, garantindo que sejam processados corretamente pelo Vite durante o build.
+## 🧠 Principais Funcionalidades
+- 📋 **Cadastro de Pacientes**  
+- 🩺 **Listagem de Consultas e Prontuários**  
+- 🧑‍⚕️ **Gestão de Médicos e Especialidades**  
+- 📞 **Atendimento via Teleconsulta (simulação)**  
+- ⚙️ **Integração completa com API REST do Backend**
 
-📁 Estrutura de Pastas do Projeto
-A estrutura de pastas segue o padrão de projetos Vite + React, organizada da seguinte forma:
+---
 
-              
+## 🔗 Integração com Backend
+- **API Java (Quarkus)** hospedada no Render  
+- **Banco de Dados:** Oracle  
+- Comunicação via **endpoints RESTful**  
+- Testes realizados com **Swagger UI**
+
+---
+
+## 📂 Estrutura do Projeto
+```
+challenge-front/
+│
 ├── src/
-│   ├── assets/           # Imagens, fontes, etc.
-│   │   └── img/
-│   │       ├── gabriel.jpeg
-│   │       ├── guilherme.jpeg
-│   │       └── pedro.jpeg
-│   ├── components/       # Componentes React reutilizáveis
-│   │   └── Integrantes.jsx
-│   ├── App.jsx           # Componente principal da aplicação
-│   └── main.jsx          # Ponto de entrada da aplicação
-├── .eslintrc.cjs         # Configurações do ESLint
-├── index.html            # Arquivo HTML principal
-├── package.json          # Dependências e scripts do projeto
-├── README.md             # Documentação do projeto
-└── vite.config.js        # Configurações do Vite
-🐙 Link do GitHub
-O código-fonte completo do projeto está disponível no GitHub. Sinta-se à vontade para clonar, explorar e contribuir.
+│   ├── assets/         # Imagens e ícones
+│   ├── components/     # Componentes reutilizáveis
+│   ├── pages/          # Páginas principais da aplicação
+│   ├── rotas/          # Configuração de rotas
+│   └── utils/          # Funções auxiliares
+│
+├── package.json
+├── tailwind.config.js
+└── README.md
+```
 
-🔗 Acesse o Repositório no GitHub
+---
 
-Atenção:(https://github.com/Challenge-Hospital-das-Clinicas/front-2semestre.git)
+## ⚙️ Como Executar o Projeto
 
-link do vídeo no youtube: (https://youtu.be/rw1xChmnwcQ?si=7zYTF_R-neNoS_xz)
+### 🔧 Pré-requisitos
+- Node.js e npm instalados  
+- Git configurado  
 
+### ▶️ Passos
+```bash
+# Clonar o repositório
+git clone https://github.com/Sprint-4/Frontend-sprint4.git
 
+# Entrar na pasta
+cd Frontend-sprint4
 
-🎥 Vídeo de Apresentação no YouTube
-Preparamos um vídeo demonstrando as funcionalidades do projeto, explicando as tecnologias utilizadas e o processo de desenvolvimento.
+# Instalar dependências
+npm install
+
+# Rodar o projeto
+npm run dev
+```
+
+---
+
+## 📸 Protótipos e Telas
+*(Adicione aqui prints das principais telas do sistema ou link para o Figma)*
+
+---
+
+## 🧩 Contribuição
+Sinta-se à vontade para contribuir com melhorias, ajustes ou sugestões!  
+Basta criar uma branch, fazer suas alterações e abrir um pull request. 💡  
+
+---
+
+## 📜 Licença
+Projeto acadêmico desenvolvido para fins educacionais – FIAP © 2025  
+Todos os direitos reservados à equipe **BDB**.  
