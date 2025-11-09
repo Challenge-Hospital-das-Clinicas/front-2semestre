@@ -1,61 +1,116 @@
-Projeto: Vitrine de Equipe - Challenge Front-End
-Este projeto é uma aplicação web desenvolvida como parte de um desafio de front-end. O objetivo principal é apresentar os membros de uma equipe em um layout moderno e responsivo, utilizando tecnologias de ponta do ecossistema React.
+# 🏥 Projeto: HospitalTech - Painel Administrativo (CRUDs)
 
-🚀 Informações para Manipular o Sistema
+### 🧑‍💻 Integrantes da Equipe
+
+Este projeto foi desenvolvido pela equipe **BDB**:
+
+- **Pedro Henrique Luiz Alves Duarte** — RM563405  
+- **Guilherme Macedo Martins** — RM562396
+
+🔗 **[Acesse o Repositório no GitHub](https://github.com/Sprint-4/frontend.git)**
+
+🔗 **[Assista ao Vídeo no YouTube](https://youtu.be/kQmOOXfxa30)**
+
+
+Este projeto é uma aplicação web **SPA (Single Page Application)** completa, desenvolvida como parte do **Challenge de Front-End da FIAP (Sprint 4)**.  
+O objetivo principal é consumir **100% uma API RESTful de Java (Quarkus)**, fornecendo uma **interface administrativa completa** para gerenciar 6 entidades do sistema:
+
+> Médicos, Pacientes, Consultas, Convênios, Endereços e Especialidades.
+
+O projeto implementa um **CRUD (Create, Read, Update, Delete)** completo para cada uma dessas entidades, com:
+- Tratamento de erros (como `429 Too Many Requests` e `503 Service Unavailable`)
+- Validação de formulários
+- Carregamento de dados assíncrono (fetch + retry)
+- Feedback visual para ações do usuário
+
+---
+
+## 🚀 Informações para Manipular o Sistema
+
 Esta seção contém todos os detalhes técnicos para entender, instalar e executar o projeto.
 
-✨ Tecnologias Utilizadas
+### ✨ Tecnologias Utilizadas
+
 O projeto foi construído com as seguintes tecnologias:
 
-React: Biblioteca para construir interfaces de usuário.
+- **React** → Biblioteca para construção de interfaces de usuário.
+- **Vite** → Ferramenta de build moderna e ultrarrápida para desenvolvimento front-end.
+- **TypeScript** → Superset do JavaScript que adiciona tipagem estática, aumentando a robustez do código.
+- **Tailwind CSS** → Framework de CSS utility-first para criar designs customizados rapidamente.
+- **React Router DOM** → Gerenciamento de rotas (SPA).
+- **React Hook Form** → Validação e gerenciamento de estado dos formulários de CRUD.
 
-Vite: Ferramenta de build moderna e ultrarrápida para desenvolvimento front-end.
 
-TypeScript: Superset do JavaScript que adiciona tipagem estática, aumentando a robustez do código.
+### 🖼️ Imagens e Ícones
 
-Tailwind CSS: Framework de CSS utility-first para criar designs customizados rapidamente.
+O projeto utiliza imagens locais para exibir as fotos dos integrantes (na rota `/integrantes`).  
+As imagens estão em:
 
-🧑‍💻 Integrantes da Equipe
-Este projeto foi desenvolvido pela seguinte equipe:
+```
+src/assets/img/
+```
 
-Pedro Henrique Luiz Alves Duarte
+E são importadas diretamente nos componentes React, garantindo que o **Vite** as processe corretamente durante o build.
 
-Gabriel Hayashi Monteiro
+---
 
-Guilherme Macedo Martins
+### 📁 Estrutura de Pastas do Projeto
 
-🖼️ Imagens e Ícones
-O projeto utiliza imagens locais para a exibição das fotos dos integrantes. Os arquivos de imagem estão localizados no diretório src/assets/img/ e são importados diretamente no componente React, garantindo que sejam processados corretamente pelo Vite durante o build.
+A estrutura segue o padrão **Vite + React**, com foco na componentização de CRUDs e rotas:
 
-📁 Estrutura de Pastas do Projeto
-A estrutura de pastas segue o padrão de projetos Vite + React, organizada da seguinte forma:
-
-              
+```
+challenge-front/
 ├── src/
-│   ├── assets/           # Imagens, fontes, etc.
-│   │   └── img/
-│   │       ├── gabriel.jpeg
-│   │       ├── guilherme.jpeg
-│   │       └── pedro.jpeg
-│   ├── components/       # Componentes React reutilizáveis
-│   │   └── Integrantes.jsx
-│   ├── App.jsx           # Componente principal da aplicação
-│   └── main.jsx          # Ponto de entrada da aplicação
-├── .eslintrc.cjs         # Configurações do ESLint
-├── index.html            # Arquivo HTML principal
-├── package.json          # Dependências e scripts do projeto
-├── README.md             # Documentação do projeto
-└── vite.config.js        # Configurações do Vite
-🐙 Link do GitHub
-O código-fonte completo do projeto está disponível no GitHub. Sinta-se à vontade para clonar, explorar e contribuir.
+│   ├── assets/
+│   │   └── img/                     # Imagens (fotos dos integrantes)
+│   ├── componentes/                 # Componentes reutilizáveis (Header, Menu, Footer)
+│   │   ├── Cabecalho/
+│   │   ├── Menu/
+│   │   └── Rodape/
+│   ├── rotas/                       # Componentes de Página (SPA)
+│   │   ├── AdminGeral/              # Página única com os 6 CRUDs
+│   │   │   ├── index.tsx
+│   │   │   ├── CrudMedico.tsx
+│   │   │   ├── CrudPaciente.tsx
+│   │   │   ├── CrudConsulta.tsx
+│   │   │   ├── CrudConvenio.tsx
+│   │   │   ├── CrudEndereco.tsx
+│   │   │   └── CrudEspecialidade.tsx
+│   │   ├── contato/
+│   │   ├── error/
+│   │   ├── faq/
+│   │   ├── home/
+│   │   ├── integrantes/
+│   │   ├── marcarConsulta/
+│   │   └── tutorial/
+│   ├── utils/                       # Funções auxiliares (api.ts com fetchWithRetry)
+│   │   └── api.ts
+│   ├── App.tsx                      # Componente principal (layout geral)
+│   ├── index.css                    # CSS global (importa Tailwind)
+│   └── main.tsx                     # Ponto de entrada (React Router)
+├── .gitignore
+├── index.html                       # Arquivo HTML principal
+├── package.json                     # Dependências e scripts
+├── README.md                        # Documentação do projeto
+└── vite.config.ts                   # Configurações do Vite (Proxy da API)
+```
 
-🔗 Acesse o Repositório no GitHub
+---
 
-Atenção:(https://github.com/Challenge-Hospital-das-Clinicas/front-2semestre.git)
+### 🐙 Link do GitHub
 
-link do vídeo no youtube: (https://youtu.be/rw1xChmnwcQ?si=7zYTF_R-neNoS_xz)
+O código-fonte completo do projeto, incluindo todo o histórico de commits e o Gitflow, está disponível no GitHub:
 
 
 
-🎥 Vídeo de Apresentação no YouTube
-Preparamos um vídeo demonstrando as funcionalidades do projeto, explicando as tecnologias utilizadas e o processo de desenvolvimento.
+---
+
+### 🎥 Vídeo de Apresentação no YouTube
+
+O vídeo demonstra o sistema completo — incluindo a responsividade, a navegação entre as páginas e o funcionamento da área administrativa com os 6 CRUDs integrados à API Java em tempo real.
+
+
+
+---
+
+> 📘 Desenvolvido com dedicação para o Challenge da FIAP — Sprint 4 – 2025.
